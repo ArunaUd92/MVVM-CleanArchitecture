@@ -23,6 +23,7 @@
 		330D3FD72C3ADF38005CC4B0 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FD52C3ADF38005CC4B0 /* UserView.swift */; };
 		330D3FDD2C3ADF8A005CC4B0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 330D3FDC2C3ADF8A005CC4B0 /* Alamofire */; };
 		330D3FDF2C3ADF8A005CC4B0 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 330D3FDE2C3ADF8A005CC4B0 /* AlamofireDynamic */; };
+		330D3FE22C3D3774005CC4B0 /* FetchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE12C3D3774005CC4B0 /* FetchUsersUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		330D3FCD2C3ADF31005CC4B0 /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
 		330D3FD32C3ADF38005CC4B0 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		330D3FD52C3ADF38005CC4B0 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		330D3FE12C3D3774005CC4B0 /* FetchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		330D3FC12C3ADF29005CC4B0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				330D3FE02C3D3753005CC4B0 /* UseCases */,
 				330D3FC22C3ADF29005CC4B0 /* Repositories */,
 				330D3FC42C3ADF29005CC4B0 /* Entities */,
 			);
@@ -246,6 +249,14 @@
 			children = (
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		330D3FE02C3D3753005CC4B0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				330D3FE12C3D3774005CC4B0 /* FetchUsersUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +403,7 @@
 				330D3FCF2C3ADF31005CC4B0 /* APIConfig.swift in Sources */,
 				330D3F9A2C3ADF0C005CC4B0 /* ContentView.swift in Sources */,
 				330D3F982C3ADF0C005CC4B0 /* MVVM_CleanArchitectureApp.swift in Sources */,
+				330D3FE22C3D3774005CC4B0 /* FetchUsersUseCase.swift in Sources */,
 				330D3FD72C3ADF38005CC4B0 /* UserView.swift in Sources */,
 				330D3FC62C3ADF29005CC4B0 /* UserRepository.swift in Sources */,
 			);

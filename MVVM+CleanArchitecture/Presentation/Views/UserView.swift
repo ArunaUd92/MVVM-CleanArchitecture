@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UserView: View {
-    @StateObject private var viewModel = UserViewModel(userRepository: UserRepositoryImpl())
+    @StateObject private var viewModel = UserViewModel(fetchUsersUseCase: FetchUsersUseCaseImpl(userRepository: UserRepositoryImpl()))
 
     var body: some View {
         NavigationView {

@@ -18,18 +18,18 @@ class UserViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: IdentifiableError?
 
-    private let userRepository: UserRepository
+    private let fetchUsersUseCase: FetchUsersUseCase
     private var cancellables: Set<AnyCancellable> = []
 
-    init(userRepository: UserRepository) {
-        self.userRepository = userRepository
+    init(fetchUsersUseCase: FetchUsersUseCase) {
+        self.fetchUsersUseCase = fetchUsersUseCase
     }
 
     func fetchUsers() {
         isLoading = true
         errorMessage = nil
         
-        userRepository.fetchUsers()
+        fetchUsersUseCase.execute()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false
