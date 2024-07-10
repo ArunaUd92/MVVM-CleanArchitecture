@@ -24,6 +24,9 @@
 		330D3FDD2C3ADF8A005CC4B0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 330D3FDC2C3ADF8A005CC4B0 /* Alamofire */; };
 		330D3FDF2C3ADF8A005CC4B0 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 330D3FDE2C3ADF8A005CC4B0 /* AlamofireDynamic */; };
 		330D3FE22C3D3774005CC4B0 /* FetchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE12C3D3774005CC4B0 /* FetchUsersUseCase.swift */; };
+		330D3FE52C3ED2D8005CC4B0 /* UserFetchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE42C3ED2D8005CC4B0 /* UserFetchDelegate.swift */; };
+		330D3FE72C3ED365005CC4B0 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */; };
+		330D3FEA2C3ED45C005CC4B0 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE92C3ED45C005CC4B0 /* UserCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		330D3FD32C3ADF38005CC4B0 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		330D3FD52C3ADF38005CC4B0 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		330D3FE12C3D3774005CC4B0 /* FetchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersUseCase.swift; sourceTree = "<group>"; };
+		330D3FE42C3ED2D8005CC4B0 /* UserFetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchDelegate.swift; sourceTree = "<group>"; };
+		330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
+		330D3FE92C3ED45C005CC4B0 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 		330D3FC12C3ADF29005CC4B0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				330D3FE32C3ED2B0005CC4B0 /* Protocols */,
 				330D3FE02C3D3753005CC4B0 /* UseCases */,
 				330D3FC22C3ADF29005CC4B0 /* Repositories */,
 				330D3FC42C3ADF29005CC4B0 /* Entities */,
@@ -207,6 +214,7 @@
 		330D3FD12C3ADF38005CC4B0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				330D3FE82C3ED43A005CC4B0 /* Coordinators */,
 				330D3FD22C3ADF38005CC4B0 /* ViewModels */,
 				330D3FD42C3ADF38005CC4B0 /* Views */,
 			);
@@ -225,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				330D3FD52C3ADF38005CC4B0 /* UserView.swift */,
+				330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +266,22 @@
 				330D3FE12C3D3774005CC4B0 /* FetchUsersUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		330D3FE32C3ED2B0005CC4B0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				330D3FE42C3ED2D8005CC4B0 /* UserFetchDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		330D3FE82C3ED43A005CC4B0 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				330D3FE92C3ED45C005CC4B0 /* UserCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +424,9 @@
 				330D3FC72C3ADF29005CC4B0 /* User.swift in Sources */,
 				330D3FD62C3ADF38005CC4B0 /* UserViewModel.swift in Sources */,
 				330D3FCE2C3ADF31005CC4B0 /* APIService.swift in Sources */,
+				330D3FE52C3ED2D8005CC4B0 /* UserFetchDelegate.swift in Sources */,
+				330D3FE72C3ED365005CC4B0 /* UserDetailView.swift in Sources */,
+				330D3FEA2C3ED45C005CC4B0 /* UserCoordinator.swift in Sources */,
 				330D3FD02C3ADF31005CC4B0 /* UserRepositoryImpl.swift in Sources */,
 				330D3FCF2C3ADF31005CC4B0 /* APIConfig.swift in Sources */,
 				330D3F9A2C3ADF0C005CC4B0 /* ContentView.swift in Sources */,

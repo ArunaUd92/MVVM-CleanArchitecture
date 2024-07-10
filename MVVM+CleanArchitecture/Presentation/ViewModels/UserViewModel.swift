@@ -20,6 +20,7 @@ class UserViewModel: ObservableObject {
 
     private let fetchUsersUseCase: FetchUsersUseCase
     private var cancellables: Set<AnyCancellable> = []
+    weak var delegate: UserFetchDelegate?
 
     init(fetchUsersUseCase: FetchUsersUseCase) {
         self.fetchUsersUseCase = fetchUsersUseCase
@@ -28,17 +29,23 @@ class UserViewModel: ObservableObject {
     func fetchUsers() {
         isLoading = true
         errorMessage = nil
-        
+
         fetchUsersUseCase.execute()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 self?.isLoading = false
                 if case .failure(let error) = completion {
                     self?.errorMessage = IdentifiableError(message: error.localizedDescription)
+                    self?.delegate?.didFailWithError(error: error)
                 }
             } receiveValue: { [weak self] users in
                 self?.users = users
+                self?.delegate?.didFetchUsers(users: users)
             }
             .store(in: &cancellables)
+    }
+
+    func selectUser(_ user: User) {
+        delegate?.didSelectUser(user: user)
     }
 }
