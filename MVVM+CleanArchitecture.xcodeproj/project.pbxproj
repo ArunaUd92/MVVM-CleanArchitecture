@@ -27,6 +27,10 @@
 		330D3FE52C3ED2D8005CC4B0 /* UserFetchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE42C3ED2D8005CC4B0 /* UserFetchDelegate.swift */; };
 		330D3FE72C3ED365005CC4B0 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */; };
 		330D3FEA2C3ED45C005CC4B0 /* UserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D3FE92C3ED45C005CC4B0 /* UserCoordinator.swift */; };
+		330D402D2C4F3574005CC4B0 /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D402C2C4F3574005CC4B0 /* UserViewModelTests.swift */; };
+		330D40302C4F35D0005CC4B0 /* MockUserFetchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D402F2C4F35D0005CC4B0 /* MockUserFetchDelegate.swift */; };
+		330D40312C4F3659005CC4B0 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D40282C4F34AF005CC4B0 /* MockUserRepository.swift */; };
+		330D40322C4F365E005CC4B0 /* MockFetchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		330D3FE42C3ED2D8005CC4B0 /* UserFetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetchDelegate.swift; sourceTree = "<group>"; };
 		330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		330D3FE92C3ED45C005CC4B0 /* UserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoordinator.swift; sourceTree = "<group>"; };
+		330D40282C4F34AF005CC4B0 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchUsersUseCase.swift; sourceTree = "<group>"; };
+		330D402C2C4F3574005CC4B0 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		330D402F2C4F35D0005CC4B0 /* MockUserFetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserFetchDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +152,9 @@
 		330D3FA72C3ADF0E005CC4B0 /* MVVM+CleanArchitectureTests */ = {
 			isa = PBXGroup;
 			children = (
+				330D402E2C4F35B8005CC4B0 /* MockTest */,
 				330D3FA82C3ADF0E005CC4B0 /* MVVM_CleanArchitectureTests.swift */,
+				330D402C2C4F3574005CC4B0 /* UserViewModelTests.swift */,
 			);
 			path = "MVVM+CleanArchitectureTests";
 			sourceTree = "<group>";
@@ -161,6 +171,7 @@
 		330D3FC12C3ADF29005CC4B0 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				330D40272C4F33C4005CC4B0 /* MockTest */,
 				330D3FE32C3ED2B0005CC4B0 /* Protocols */,
 				330D3FE02C3D3753005CC4B0 /* UseCases */,
 				330D3FC22C3ADF29005CC4B0 /* Repositories */,
@@ -282,6 +293,39 @@
 				330D3FE92C3ED45C005CC4B0 /* UserCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		330D40272C4F33C4005CC4B0 /* MockTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockTest;
+			sourceTree = "<group>";
+		};
+		330D402E2C4F35B8005CC4B0 /* MockTest */ = {
+			isa = PBXGroup;
+			children = (
+				330D40342C4F36A1005CC4B0 /* UseCases */,
+				330D40332C4F3694005CC4B0 /* Repositories */,
+				330D402F2C4F35D0005CC4B0 /* MockUserFetchDelegate.swift */,
+			);
+			path = MockTest;
+			sourceTree = "<group>";
+		};
+		330D40332C4F3694005CC4B0 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				330D40282C4F34AF005CC4B0 /* MockUserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		330D40342C4F36A1005CC4B0 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,7 +485,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				330D40312C4F3659005CC4B0 /* MockUserRepository.swift in Sources */,
+				330D40302C4F35D0005CC4B0 /* MockUserFetchDelegate.swift in Sources */,
 				330D3FA92C3ADF0E005CC4B0 /* MVVM_CleanArchitectureTests.swift in Sources */,
+				330D402D2C4F3574005CC4B0 /* UserViewModelTests.swift in Sources */,
+				330D40322C4F365E005CC4B0 /* MockFetchUsersUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
