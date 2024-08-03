@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct UserView: View {
-    @StateObject private var viewModel = UserViewModel(fetchUsersUseCase: FetchUsersUseCaseImpl(userRepository: UserRepositoryImpl()))
+    @StateObject private var viewModel = UserViewModel(
+        fetchUsersUseCase: FetchUsersUseCaseImpl(userRepository: UserRepositoryImpl()),
+        coreDataRepository: CoreDataUserRepository()
+    )
     @StateObject private var coordinator = UserCoordinator()
 
     var body: some View {
@@ -45,6 +48,13 @@ struct UserView: View {
                     }
                     .listStyle(InsetGroupedListStyle())
                     .navigationTitle("Users")
+                    .toolbar {
+                         ToolbarItem(placement: .navigationBarTrailing) {
+                             Button("Save") {
+                                 viewModel.saveUsers()
+                             }
+                         }
+                     }
                     .background(
                         NavigationLink(destination: UserDetailView(user: coordinator.selectedUser ?? User(id: 0, name: "", email: "")), isActive: $coordinator.isShowingDetailView) {
                             EmptyView()

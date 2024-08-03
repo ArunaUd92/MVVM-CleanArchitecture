@@ -20,10 +20,12 @@ class UserViewModel: ObservableObject {
 
     private let fetchUsersUseCase: FetchUsersUseCase
     private var cancellables: Set<AnyCancellable> = []
+    private let coreDataRepository: CoreDataUserRepository
     weak var delegate: UserFetchDelegate?
 
-    init(fetchUsersUseCase: FetchUsersUseCase) {
+    init(fetchUsersUseCase: FetchUsersUseCase, coreDataRepository: CoreDataUserRepository) {
         self.fetchUsersUseCase = fetchUsersUseCase
+        self.coreDataRepository = coreDataRepository
     }
 
     func fetchUsers() {
@@ -43,6 +45,10 @@ class UserViewModel: ObservableObject {
                 self?.delegate?.didFetchUsers(users: users)
             }
             .store(in: &cancellables)
+    }
+    
+    func saveUsers() {
+        coreDataRepository.saveUsers(users)
     }
 
     func selectUser(_ user: User) {
