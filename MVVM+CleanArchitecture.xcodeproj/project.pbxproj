@@ -142,8 +142,6 @@
 				330D3FC12C3ADF29005CC4B0 /* Domain */,
 				330D3FC82C3ADF31005CC4B0 /* Data */,
 				330D3FD12C3ADF38005CC4B0 /* Presentation */,
-				330D3FD82C3ADF3E005CC4B0 /* Utils */,
-				330D3FDA2C3ADF44005CC4B0 /* SupportingFiles */,
 				330D3F972C3ADF0C005CC4B0 /* MVVM_CleanArchitectureApp.swift */,
 				330D3F992C3ADF0C005CC4B0 /* ContentView.swift */,
 				330D3F9B2C3ADF0E005CC4B0 /* Assets.xcassets */,
@@ -257,28 +255,6 @@
 				330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		330D3FD82C3ADF3E005CC4B0 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				330D3FD92C3ADF3E005CC4B0 /* Extensions */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		330D3FD92C3ADF3E005CC4B0 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		330D3FDA2C3ADF44005CC4B0 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		330D3FE02C3D3753005CC4B0 /* UseCases */ = {
