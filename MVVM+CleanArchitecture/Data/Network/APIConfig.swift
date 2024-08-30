@@ -10,6 +10,14 @@ import Foundation
 
 struct APIConfig {
     static let baseURL = "https://jsonplaceholder.typicode.com/"
-    static let apiToken = "YOUR_JWT_TOKEN"
-    static let refreshToken = "YOUR_REFRESH_TOKEN"
+
+}
+
+struct APIError: Decodable, Error {
+    let message: String
+}
+
+struct TokenResponse: Decodable {
+    let accessToken: String
+    let refreshToken: String
 }
