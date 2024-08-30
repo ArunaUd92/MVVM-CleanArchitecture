@@ -31,6 +31,7 @@
 		330D40302C4F35D0005CC4B0 /* MockUserFetchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D402F2C4F35D0005CC4B0 /* MockUserFetchDelegate.swift */; };
 		330D40312C4F3659005CC4B0 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D40282C4F34AF005CC4B0 /* MockUserRepository.swift */; };
 		330D40322C4F365E005CC4B0 /* MockFetchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */; };
+		3339A0E82C81D90400C6DE37 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339A0E72C81D90400C6DE37 /* KeychainService.swift */; };
 		33B19FA12C5DBCF600E69827 /* MyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33B19F9F2C5DBCF600E69827 /* MyDataModel.xcdatamodeld */; };
 		33B19FA32C5DBD3A00E69827 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B19FA22C5DBD3A00E69827 /* CoreDataStack.swift */; };
 		33B19FB42C5E1F0500E69827 /* UserDataEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B19FB22C5E1F0500E69827 /* UserDataEntity+CoreDataClass.swift */; };
@@ -81,6 +82,7 @@
 		330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchUsersUseCase.swift; sourceTree = "<group>"; };
 		330D402C2C4F3574005CC4B0 /* UserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
 		330D402F2C4F35D0005CC4B0 /* MockUserFetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserFetchDelegate.swift; sourceTree = "<group>"; };
+		3339A0E72C81D90400C6DE37 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		33B19FA02C5DBCF600E69827 /* MyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDataModel.xcdatamodel; sourceTree = "<group>"; };
 		33B19FA22C5DBD3A00E69827 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		33B19FB22C5E1F0500E69827 /* UserDataEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 			children = (
 				330D3FCA2C3ADF31005CC4B0 /* APIService.swift */,
 				330D3FCB2C3ADF31005CC4B0 /* APIConfig.swift */,
+				3339A0E72C81D90400C6DE37 /* KeychainService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				330D3F9A2C3ADF0C005CC4B0 /* ContentView.swift in Sources */,
 				330D3F982C3ADF0C005CC4B0 /* MVVM_CleanArchitectureApp.swift in Sources */,
 				330D3FE22C3D3774005CC4B0 /* FetchUsersUseCase.swift in Sources */,
+				3339A0E82C81D90400C6DE37 /* KeychainService.swift in Sources */,
 				33B19FA12C5DBCF600E69827 /* MyDataModel.xcdatamodeld in Sources */,
 				330D3FD72C3ADF38005CC4B0 /* UserView.swift in Sources */,
 				330D3FC62C3ADF29005CC4B0 /* UserRepository.swift in Sources */,
