@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct UserView: View {
+    @StateObject private var reachabilityManager = NetworkReachabilityManager()
     @StateObject private var viewModel = UserViewModel(
         fetchUsersUseCase: FetchUsersUseCaseImpl(userRepository: UserRepositoryImpl()),
         coreDataRepository: CoreDataUserRepository()
@@ -23,6 +24,17 @@ struct UserView: View {
                         .scaleEffect(1.5, anchor: .center)
                         .padding(.top, 50)
                 } else {
+                    
+                    if !reachabilityManager.isConnected {
+                         Text("No Internet Connection")
+                             .font(.headline)
+                             .foregroundColor(.white)
+                             .padding()
+                             .background(Color.red)
+                             .cornerRadius(8)
+                             .padding(.top, 10)
+                     }
+                    
                     List(viewModel.users) { user in
                         Button(action: {
                             viewModel.selectUser(user)
@@ -65,7 +77,9 @@ struct UserView: View {
             }
             .onAppear {
                 viewModel.delegate = coordinator
-                viewModel.fetchUsers()
+                reachabilityManager.onConnected = {
+                    viewModel.fetchUsers()
+                }
             }
             .alert(item: $viewModel.errorMessage) { error in
                 Alert(
