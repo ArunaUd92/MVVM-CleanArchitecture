@@ -17,7 +17,7 @@ class UserViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         mockFetchUsersUseCase = MockFetchUsersUseCase()
-        viewModel = UserViewModel(fetchUsersUseCase: mockFetchUsersUseCase)
+        viewModel = UserViewModel(fetchUsersUseCase: mockFetchUsersUseCase, coreDataRepository: CoreDataUserRepository())
         cancellables = []
     }
 
