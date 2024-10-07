@@ -33,6 +33,8 @@
 		330D40322C4F365E005CC4B0 /* MockFetchUsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */; };
 		3339A0E82C81D90400C6DE37 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339A0E72C81D90400C6DE37 /* KeychainService.swift */; };
 		3339A10C2C828D4A00C6DE37 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3339A10B2C828D4A00C6DE37 /* NetworkReachabilityManager.swift */; };
+		33A4E71A2CB3E7F100EAAA2C /* AppleSignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4E7192CB3E7F100EAAA2C /* AppleSignInViewModel.swift */; };
+		33A4E71D2CB3E83A00EAAA2C /* AppleSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4E71C2CB3E83A00EAAA2C /* AppleSignInView.swift */; };
 		33B19FA12C5DBCF600E69827 /* MyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33B19F9F2C5DBCF600E69827 /* MyDataModel.xcdatamodeld */; };
 		33B19FA32C5DBD3A00E69827 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B19FA22C5DBD3A00E69827 /* CoreDataStack.swift */; };
 		33B19FB42C5E1F0500E69827 /* UserDataEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B19FB22C5E1F0500E69827 /* UserDataEntity+CoreDataClass.swift */; };
@@ -85,6 +87,9 @@
 		330D402F2C4F35D0005CC4B0 /* MockUserFetchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserFetchDelegate.swift; sourceTree = "<group>"; };
 		3339A0E72C81D90400C6DE37 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		3339A10B2C828D4A00C6DE37 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		33A4E7172CB3E79100EAAA2C /* MVVM+CleanArchitecture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MVVM+CleanArchitecture.entitlements"; sourceTree = "<group>"; };
+		33A4E7192CB3E7F100EAAA2C /* AppleSignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInViewModel.swift; sourceTree = "<group>"; };
+		33A4E71C2CB3E83A00EAAA2C /* AppleSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInView.swift; sourceTree = "<group>"; };
 		33B19FA02C5DBCF600E69827 /* MyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDataModel.xcdatamodel; sourceTree = "<group>"; };
 		33B19FA22C5DBD3A00E69827 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		33B19FB22C5E1F0500E69827 /* UserDataEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDataEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 		330D3F962C3ADF0C005CC4B0 /* MVVM+CleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				33A4E7172CB3E79100EAAA2C /* MVVM+CleanArchitecture.entitlements */,
 				33B19F9E2C5DBCCA00E69827 /* CoreData */,
 				330D3FC12C3ADF29005CC4B0 /* Domain */,
 				330D3FC82C3ADF31005CC4B0 /* Data */,
@@ -249,6 +255,7 @@
 		330D3FD22C3ADF38005CC4B0 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				33A4E7182CB3E7D100EAAA2C /* SocialLogin */,
 				330D3FD32C3ADF38005CC4B0 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
@@ -257,6 +264,7 @@
 		330D3FD42C3ADF38005CC4B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33A4E71B2CB3E81C00EAAA2C /* SignIn */,
 				330D3FD52C3ADF38005CC4B0 /* UserView.swift */,
 				330D3FE62C3ED365005CC4B0 /* UserDetailView.swift */,
 			);
@@ -311,6 +319,22 @@
 				330D402A2C4F34DF005CC4B0 /* MockFetchUsersUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		33A4E7182CB3E7D100EAAA2C /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				33A4E7192CB3E7F100EAAA2C /* AppleSignInViewModel.swift */,
+			);
+			path = SocialLogin;
+			sourceTree = "<group>";
+		};
+		33A4E71B2CB3E81C00EAAA2C /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				33A4E71C2CB3E83A00EAAA2C /* AppleSignInView.swift */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		33B19F9E2C5DBCCA00E69827 /* CoreData */ = {
@@ -493,6 +517,8 @@
 				330D3F9A2C3ADF0C005CC4B0 /* ContentView.swift in Sources */,
 				330D3F982C3ADF0C005CC4B0 /* MVVM_CleanArchitectureApp.swift in Sources */,
 				330D3FE22C3D3774005CC4B0 /* FetchUsersUseCase.swift in Sources */,
+				33A4E71D2CB3E83A00EAAA2C /* AppleSignInView.swift in Sources */,
+				33A4E71A2CB3E7F100EAAA2C /* AppleSignInViewModel.swift in Sources */,
 				3339A0E82C81D90400C6DE37 /* KeychainService.swift in Sources */,
 				33B19FA12C5DBCF600E69827 /* MyDataModel.xcdatamodeld in Sources */,
 				330D3FD72C3ADF38005CC4B0 /* UserView.swift in Sources */,
@@ -662,6 +688,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MVVM+CleanArchitecture/MVVM+CleanArchitecture.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MVVM+CleanArchitecture/Preview Content\"";
@@ -690,6 +717,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MVVM+CleanArchitecture/MVVM+CleanArchitecture.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MVVM+CleanArchitecture/Preview Content\"";
